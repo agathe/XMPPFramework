@@ -107,7 +107,8 @@
             NSString *elementID = [iq attributeStringValueForName:@"id"];
             if (elementID) {
                 NSArray * elementIDComp = [elementID componentsSeparatedByString:@":"];
-                if (elementIDComp > 0) {
+//                if (elementIDComp > 0) {
+                if (elementIDComp.count >= 2) { // agathe
                     NSString * opType = [elementIDComp objectAtIndex:1];
                     
                     if ([opType isEqualToString:@"publish_node"]) {
